@@ -28,7 +28,7 @@ For the micro:bit to be able to communicate with Scratch, you need to know how t
 
 ## Setting up the Python file
 
-1. Open IDLE (`Menu`>`Programming`>`Python 3 (IDLE`), create a new file (`File`>`New File`), and copy and paste the code below into the file. Save it as `rpi.py`.
+1. Open IDLE (**Menu**>**Programming**>**Python 3**), create a new file (**File**>**New File**), and copy and paste the code below into the file. Save it as `rpi.py`.
 
 	```python
 	import serial
@@ -37,7 +37,7 @@ For the micro:bit to be able to communicate with Scratch, you need to know how t
 
 
     scr = scratch.Scratch()
-    ## THE NEXT LINE MIGHT NEED CHANGING - TYPE ls /dev/ttyA* into the terminal to see which port is needed.
+    ## THE NEXT LINE MIGHT NEED TO BE CHANGED - TYPE ls /dev/ttyA* into the terminal to see which port is needed.
 	PORT = "/dev/ttyACM1"
 	## 
 	BAUD = 115200
@@ -77,7 +77,7 @@ It needs to be the same as the port you noted down earlier.
 
 The micro:bit needs to run some code that will constantly print out its accelerometer readings and button pushes.
 
-1. Open up **mu** by opening LXTerminal and typing
+1. Open up mu by opening LXTerminal and typing
 
 	```bash
 	./mu
@@ -100,34 +100,34 @@ The micro:bit needs to run some code that will constantly print out its accelero
 
 	```
 
-1. You can **flash** this file into your micro:bit straight away.
+1. You can flash this file into your micro:bit straight away.
 
 ## Setting up Scratch
 
-1. Open Scratch on the Raspberry Pi. (**Menu** > **Programming** > **Scratch**)
+1. Open Scratch on the Raspberry Pi. (**Menu**>**Programming**>**Scratch**)
 
-1. Go to **Sensing** and then right-click on **slider sensor value** near the bottom of the screen and choose **enable remote sensor connections** from the context menu. Click on **OK** when the dialogue box opens.
+1. Go to **Sensing** and then right-click on `slider sensor value` near the bottom of the screen and choose `enable remote sensor connections` from the context menu. Click on **OK** when the dialogue box opens.
 
 	![screen1](images/screen1.png)
 
-1. No switch back over to IDLE and run (`F5`) your `rpi.py` script.
+1. No switch back over to IDLE and press **F5** to run your `rpi.py` script.
 
-1. In Scratch you should now be able to view the values from the micro:bit's sensors. Simply click on the arrow on the `slider sensor value` block, choose `a` and then check the box.
+1. In Scratch, you should now be able to view the values from the micro:bit's sensors. Simply click on the arrow on the **slider sensor value** block, choose `a` and then check the box.
 
 	![screen2](images/screen2.png)
 	![screen3](images/screen3.png)
 
-1. If you repeat this for sensors `b`,`x`,`y` and `z`, then your Scratch stage should look something like this.
+1. If you repeat this for sensors `b`, `x`, `y`, and `z`, then your Scratch stage should look something like this:
 
 	![screen4](images/screen4.png)
 
-1. If you tilt the micro:bit you should see the `x`, `y` and `z` values changing. Pushing the buttons will switch `a` and `b` from `False` to `True`
+1. If you tilt the micro:bit you should see the `x`, `y`, and `z` values changing. Pushing the buttons will switch `a` and `b` from `False` to `True`
 
 1. If the readings aren't working, check the micro:bit port again, and make sure the code is running on both the micro:bit and the Raspberry Pi.
 
 ## Making the assets
 
-You're going to need three new sprites for this game. Delete the *Cat* sprite and then use the web to find a *rocket* sprite, a *UFO* sprite and a *missile* sprite. You can use the ones below if you like, or even draw your own.
+You're going to need three new sprites for this game. Delete the cat sprite and then find a rocket sprite, a UFO sprite and a missile sprite. You can use the ones below if you like, search on the web, or even draw your own.
 
 	![rocket](images/rocket.png)
 	![ufo](images/ufo.png)
@@ -137,15 +137,15 @@ You're going to need three new sprites for this game. Delete the *Cat* sprite an
 
 	![screen5](images/screen5.png)
 
-1. Rename the sprites by changing the name in the *scripts pane*
+1. Rename the sprites by changing the name in the **scripts** pane.
 
 	![screen6](images/screen6.png)
 
-1. The sprites will also need resizing. You can use the `shrink sprite` tool to do this
+1. The sprites will also need to be resized. You can use the `shrink sprite` tool to do this.
 
 	![screen7](images/screen7.png)
 
-1. Lastly you should rotate the rocket and missile sprite, so they both point toward the right hand-side of the screen. Yo can do this by editing the sprite in the `costume` tab and choosing the `rotate` tool
+1. Lastly you should rotate the rocket and missile sprite, so they both point toward the right hand-side of the screen. Yo can do this by editing the sprite in the **costume** tab and choosing the `rotate` tool
 
 ![screen9](images/screen9.png)
 
@@ -153,11 +153,11 @@ You're going to need three new sprites for this game. Delete the *Cat* sprite an
 
 ## Coding the Rocket
 
-1. To code your game, you can start by adding some scripts to the rocket. Because you want the game to be played over and over again, you can get the game to be started by a `broadcast` block. You'll also need to `make a variable` called `score` and set it to `0` at the start of the game.
+1. To code your game, you can start by adding some scripts to the rocket. Because you want the game to be able to be played over and over again, you start it by using a `broadcast` block. You'll also need to `make a variable` called `score` and set it to `0` at the start of the game.
 
 	![screen10](images/screen10.png)
 
-1. To start the game the rocket need to be placed in the centre of the screen and pointing towards the right.
+1. To start the game the rocket need to be placed in the centre of the screen, pointing towards the right.
 
 	![screen11](images/screen11.png)
 
