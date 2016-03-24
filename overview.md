@@ -1,1 +1,1 @@
-In this resource you will make a something do a something so that your something can do something and use something to control the something.
+In this resource you will use a BBC micro:bit to control a sprite in Scratch, and fight a collosal inter-galactic war.
