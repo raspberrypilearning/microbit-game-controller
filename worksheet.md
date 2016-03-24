@@ -129,9 +129,9 @@ The micro:bit needs to run some code that will constantly print out its accelero
 
 You're going to need three new sprites for this game. Delete the cat sprite and then find a rocket sprite, a UFO sprite and a missile sprite. You can use the ones below if you like, search on the web, or even draw your own.
 
-	![rocket](images/rocket.png)
-	![ufo](images/ufo.png)
-	![missile](images/missile.png)
+	![](images/rocket.png)
+	![](images/ufo.png)
+	![](images/missile.png)
 
 1. Import each of your sprites into Scratch.
 
