@@ -110,18 +110,18 @@ The microbit needs to be running some code that will constantly print out it's a
 
 1. Go to `Sensing` and then near the bottom of the screen, right-click on `slider sensor value` and choose `enable remote sensor connections` from the context menu. Click on `OK` when the dialogue box opens.
 
-![screen1](images/screen1.png)
+	![screen1](images/screen1.png)
 
 1. No switch back over to IDLE and run (`F5`) your `rpi.py` script.
 
 1. In Scratch you should now be able to view the values from the micro:bit's sensors. Simply click on the arrow on the `slider sensor value` block, choose `a` and then check the box.
 
-![screen2](images/screen2.png)
-![screen3](images/screen3.png)
+	![screen2](images/screen2.png)
+	![screen3](images/screen3.png)
 
 1. If you repeat this for sensors `b`,`x`,`y` and `z`, then your Scratch stage should look something like this.
 
-![screen4](images/screen4.png)
+	![screen4](images/screen4.png)
 
 1. If you tilt the micro:bit you should see the `x`, `y` and `z` values changing. Pushing the buttons will switch `a` and `b` from `False` to `True`
 
@@ -131,21 +131,21 @@ The microbit needs to be running some code that will constantly print out it's a
 
 You're going to need three new sprites for this game. Delete the *Cat* sprite and then use the web to find a *rocket* sprite, a *UFO* sprite and a *missile* sprite. You can use the ones below if you like, or even draw your own.
 
-![rocket](images/rocket.png)
-![ufo](images/ufo.png)
-![missile](images/missile.png)
+	![rocket](images/rocket.png)
+	![ufo](images/ufo.png)
+	![missile](images/missile.png)
 
 1. Import each of your sprites into Scratch.
 
-![screen5](images/screen5.png)
+	![screen5](images/screen5.png)
 
 1. Rename the sprites by changing the name in the *scripts pane*
 
-![screen6](images/screen6.png)
+	![screen6](images/screen6.png)
 
 1. The sprites will also need resizing. You can use the `shrink sprite` tool to do this
 
-![screen7](images/screen7.png)
+	![screen7](images/screen7.png)
 
 1. Lastly you should rotate the rocket and missile sprite, so they both point toward the right hand-side of the screen. Yo can do this by editing the sprite in the `costume` tab and choosing the `rotate` tool
 
@@ -157,21 +157,21 @@ You're going to need three new sprites for this game. Delete the *Cat* sprite an
 
 1. To code your game, you can start by adding some scripts to the rocket. Because you want the game to be played over and over again, you can get the game to be started by a `broadcast` block. You'll also need to `make a variable` called `score` and set it to `0` at the start of the game.
 
-![screen10](images/screen10.png)
+	![screen10](images/screen10.png)
 
 1. To start the game the rocket need to be placed in the centre of the screen and pointing towards the right.
 
-![screen11](images/screen11.png)
+	![screen11](images/screen11.png)
 
 1. Next you need to control the rotation of the rocket. This is going to be decided by the accelerometer reading from the micro:bit. In particular the `x` sensor value. At the moment this is a value between about -1000 and 1000, so it needs to be reduced a little. Create a `new variable` called `turn` and set it as shown below.
 
-![screen12](images/screen12.png)
+	![screen12](images/screen12.png)
 
 1. Test out your game so far. When you tilt the micro:bit left and right, the rocket should spin around. If it is not working, try restarting the Python 3 program on your Raspberry Pi and re-flashing the micro:bit with it's program. You might also have to check that the microbit hasn't reconnected to a different port. `ls /dev/ttyA*`
 
 1. Next you want the rocket to move. The speed can be determined by how far forwards or backwards the microbit has been tilted. You can use the `y` sensor value for this. But again, you need to reduce the value a little (an in this case reverse it.)
 
-![screen13](images/screen13.png)
+	![screen13](images/screen13.png)
 
 1. Test your flight controls now, by tilting the micro:bit left and right, forwards and backwards.
 
@@ -179,29 +179,29 @@ You're going to need three new sprites for this game. Delete the *Cat* sprite an
 
 1. The UFO needs to start in a random location and then chase after the Rocket. This is fairly easy to set up. The Scratch `Stage` stretches from about -250 to 250 horizontally (the x-axis) and -180 to 180 vertically (the y-axis). So picking two random numbers in these ranges, would position the rocket.
 
-![screen14](images/screen14.png)
+	![screen14](images/screen14.png)
 
 1. Next you can use a `forever` loop to get the UFO to chase the rocket.
 
-![screen15](images/screen15.png)
+	![screen15](images/screen15.png)
 
 1. In a minute you'll code the missile to launch at the UFO. If the missile hits the UFO, the game should restart and the player's score should go up by one. A new script is needed for this.
 
-![screen16](images/screen16.png)
+	![screen16](images/screen16.png)
 
 1. To finish off the UFO, the game needs to end if it catches the rocket.
 
-![screen17](images/screen17.png)
+	![screen17](images/screen17.png)
 
 ## Coding the missile
 
 1. To make the missile always point in the correct direction, you can make it turn exactly the same as the rocket.
 
-![screen18](images/screen18.png)
+	![screen18](images/screen18.png)
 
 1. Next, whenever the `A` button is pressed on the microbit, the missile needs to fire. To do this, you can move it to the location of the rocket, tell it to `show` and then move forwards until it hits either the UFO or the edge of the screen. It will need to carry on turning as if flies, otherwise the missile's rotation will become out of sync with the rocket.
 
-![screen19](images/screen19.png)
+	![screen19](images/screen19.png)
 
 1. Test out your rockets new ability to shoot missiles.
 
