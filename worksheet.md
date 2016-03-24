@@ -161,13 +161,13 @@ You're going to need three new sprites for this game. Delete the cat sprite and 
 
 	![screen11](images/screen11.png)
 
-1. Next you need to control the rotation of the rocket. This is going to be decided by the accelerometer reading from the micro:bit. In particular the `x` sensor value. At the moment this is a value between about -1000 and 1000, so it needs to be reduced a little. Create a `new variable` called `turn` and set it as shown below.
+1. Next you need to control the rotation of the rocket. This is going to be decided by the accelerometer reading from the micro:bit, in particular from the `x` sensor value. At the moment this is a value between about -1000 and 1000, so it needs to be reduced a little. Create a `new variable` called `turn` and set it as shown below.
 
 	![screen12](images/screen12.png)
 
-1. Test out your game so far. When you tilt the micro:bit left and right, the rocket should spin around. If it is not working, try restarting the Python 3 program on your Raspberry Pi and re-flashing the micro:bit with it's program. You might also have to check that the microbit hasn't reconnected to a different port. `ls /dev/ttyA*`
+1. Test out your game so far: when you tilt the micro:bit left and right, the rocket should spin around. If it is not working, try restarting the Python 3 program on your Raspberry Pi and re-flashing the micro:bit with its program. You might also have to check that the micro:bit hasn't reconnected to a different port, using `ls /dev/ttyA*`
 
-1. Next you want the rocket to move. The speed can be determined by how far forwards or backwards the microbit has been tilted. You can use the `y` sensor value for this. But again, you need to reduce the value a little (an in this case reverse it.)
+1. Next you want the rocket to move. The speed can be determined by how far forwards or backwards the microbit has been tilted. You can use the `y` sensor value for this. But as before, you will need to reduce the value a little (and in this case reverse it.)
 
 	![screen13](images/screen13.png)
 
@@ -175,11 +175,11 @@ You're going to need three new sprites for this game. Delete the cat sprite and 
 
 ## Coding the UFO
 
-1. The UFO needs to start in a random location and then chase after the Rocket. This is fairly easy to set up. The Scratch `Stage` stretches from about -250 to 250 horizontally (the x-axis) and -180 to 180 vertically (the y-axis). So picking two random numbers in these ranges, would position the rocket.
+1. The UFO needs to start in a random location and then chase after the rocket. This is fairly easy to set up. The Scratch `Stage` stretches from about -250 to 250 horizontally (the x-axis) and -180 to 180 vertically (the y-axis), so picking two random numbers in these ranges will enable you to position the rocket.
 
 	![screen14](images/screen14.png)
 
-1. Next you can use a `forever` loop to get the UFO to chase the rocket.
+1. Next, you can use a `forever` loop to get the UFO to chase the rocket.
 
 	![screen15](images/screen15.png)
 
@@ -193,11 +193,11 @@ You're going to need three new sprites for this game. Delete the cat sprite and 
 
 ## Coding the missile
 
-1. To make the missile always point in the correct direction, you can make it turn exactly the same as the rocket.
+1. To make the missile always point in the correct direction, you can make it turn exactly the same way as the rocket.
 
 	![screen18](images/screen18.png)
 
-1. Next, whenever the **A** button is pressed on the micro:bit, the missile needs to fire. To do this, you can move it to the location of the rocket, tell it to **show** and then move forwards until it hits either the UFO or the edge of the screen. It will need to carry on turning as if flies, otherwise the missile's rotation will become out of sync with the rocket.
+1. Next, whenever the `a` button is pressed on the micro:bit, the missile should fire. To do this, you can move it to the location of the rocket, tell it to `show` and then move forwards until it hits either the UFO or the edge of the screen. It will need to carry on turning as if flies, otherwise the missile's rotation will become out of sync with the rocket.
 
 	![screen19](images/screen19.png)
 
@@ -207,6 +207,6 @@ You're going to need three new sprites for this game. Delete the cat sprite and 
 
 The game has plenty of potential to be improved.
 - Can you add in some obstacles for the rocket and UFO to avoid?
-- You still have to find a use for the **B** button. Maybe this could start a turbo mode where the rocket flies even faster?
+- You still have to find a use for the `b` button. Maybe this could start a turbo mode where the rocket flies faster?
 - Could the UFO shoot a laser beam at the rocket every now and then?
 
