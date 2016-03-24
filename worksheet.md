@@ -1,32 +1,30 @@
 # BBC micro:bit game controller
 
-In this resource, you'll use a micro:bit as a game controller in Scratch, and help take back control of the Galaxy
+In this resource, you'll use a micro:bit as a game controller in Scratch, and help regain control of the galaxy!
 
 ## Setting up the micro:bit
 
-If you are unfamiliar with using the micro:bit, MicroPython and the Raspberry Pi, you might want to take a look at the [Getting Started with the micro:bit](https://www.raspberrypi.org/learning/getting-started-with-microbits) resource.
+If you are unfamiliar with using the micro:bit, MicroPython, and the Raspberry Pi, you might want to take a look at the [Getting Started with the micro:bit](https://www.raspberrypi.org/learning/getting-started-with-microbits) resource.
 
-Also make sure you have the python3 scratch library and mu installed, as detailed in the [software setup guide](software.md)
+Also make sure you have the Python 3 Scratch library and mu installed, as detailed in the [software setup guide](software.md)
 
 ## Finding the USB port
 
-For the micro:bit to be able to communicate with Scratch, you need to know what how the micro:bit is connected to the Raspberry Pi.
+For the micro:bit to be able to communicate with Scratch, you need to know how the micro:bit is connected to the Raspberry Pi.
 
-1. With the micro:bit **disconnected from the Raspberry Pi, open up LXTerminal and type the following:
-
-    ```bash
-	ls /dev/ttyA*
-    ```
-
-1. Then plug in your micro:bit via the USB cable and type the command again.
+1. With the micro:bit **disconnected** from the Raspberry Pi, open up LXTerminal and type the following:
 
     ```bash
 	ls /dev/ttyA*
     ```
 
-1. There should be a new entry in the output. Probably something like `dev/ttyACM1`
-	
-1. You need to note this down.
+1. Plug your micro:bit in via the USB cable and type the command again.
+
+    ```bash
+	ls /dev/ttyA*
+    ```
+
+1. There should be a new entry in the output, probably something like `dev/ttyACM1`. You need to note this down.
 
 ## Setting up the Python file
 
@@ -72,20 +70,20 @@ For the micro:bit to be able to communicate with Scratch, you need to know what 
 	```python
 	PORT = "/dev/ttyACM1"
 	```
-
-    so it is the same as the port you noted down earlier.
+	
+It needs to be the same as the port you noted down earlier.
 
 ## Coding the micro:bit
 
-The microbit needs to be running some code that will constantly print out it's accelerometer readings and button pushes.
+The micro:bit needs to run some code that will constantly print out its accelerometer readings and button pushes.
 
-1. Open up **mu**, by opening LXTerminal and typing
+1. Open up **mu** by opening LXTerminal and typing
 
 	```bash
 	./mu
 	```
 
-1. Now copy and paste the code below into the editor.
+1. Now copy and paste the code below into the editor:
 
 	```python
 	from microbit import *
@@ -102,13 +100,13 @@ The microbit needs to be running some code that will constantly print out it's a
 
 	```
 
-1. You can **Flash** this file into you microbit straight away.
+1. You can **flash** this file into your micro:bit straight away.
 
 ## Setting up Scratch
 
-1. Open up **Scratch** on the Raspberry Pi. (`Menu`>`Programming`>`Scratch`)
+1. Open Scratch on the Raspberry Pi. (**Menu** > **Programming** > **Scratch**)
 
-1. Go to `Sensing` and then near the bottom of the screen, right-click on `slider sensor value` and choose `enable remote sensor connections` from the context menu. Click on `OK` when the dialogue box opens.
+1. Go to **Sensing** and then right-click on **slider sensor value** near the bottom of the screen and choose **enable remote sensor connections** from the context menu. Click on **OK** when the dialogue box opens.
 
 	![screen1](images/screen1.png)
 
@@ -199,16 +197,16 @@ You're going to need three new sprites for this game. Delete the *Cat* sprite an
 
 	![screen18](images/screen18.png)
 
-1. Next, whenever the `A` button is pressed on the microbit, the missile needs to fire. To do this, you can move it to the location of the rocket, tell it to `show` and then move forwards until it hits either the UFO or the edge of the screen. It will need to carry on turning as if flies, otherwise the missile's rotation will become out of sync with the rocket.
+1. Next, whenever the **A** button is pressed on the micro:bit, the missile needs to fire. To do this, you can move it to the location of the rocket, tell it to **show** and then move forwards until it hits either the UFO or the edge of the screen. It will need to carry on turning as if flies, otherwise the missile's rotation will become out of sync with the rocket.
 
 	![screen19](images/screen19.png)
 
-1. Test out your rockets new ability to shoot missiles.
+1. Test out your rocket's new ability to shoot missiles.
 
 ## What Next?
 
 The game has plenty of potential to be improved.
 - Can you add in some obstacles for the rocket and UFO to avoid?
-- You still have the `B` button to be used. Maybe this could start a **Turbo** mode where the rocket flies even faster.
-- Could the UFO have a laser beam that it shoots at the rocket every now and then.
+- You still have to find a use for the **B** button. Maybe this could start a turbo mode where the rocket flies even faster?
+- Could the UFO shoot a laser beam at the rocket every now and then?
 
