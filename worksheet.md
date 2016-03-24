@@ -38,8 +38,10 @@ For the micro:bit to be able to communicate with Scratch, you need to know what 
 	import scratch
 
 
-	scr = scratch.Scratch()
+    scr = scratch.Scratch()
+    ## THE NEXT LINE MIGHT NEED CHANGING - TYPE ls /dev/ttyA* into the terminal to see which port is needed.
 	PORT = "/dev/ttyACM1"
+	## 
 	BAUD = 115200
 
 	s = serial.Serial(PORT)
