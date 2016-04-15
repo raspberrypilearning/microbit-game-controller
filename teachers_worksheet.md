@@ -1,4 +1,4 @@
-# Micro:bit game controller
+# The micro:bit game controller
 
 ## Objectives
 
