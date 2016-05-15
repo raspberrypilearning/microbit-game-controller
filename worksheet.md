@@ -6,8 +6,6 @@ In this resource, you'll use a micro:bit as a game controller in Scratch, and he
 
 If you are unfamiliar with using the micro:bit, MicroPython, and the Raspberry Pi, you might want to take a look at the [Getting Started with the micro:bit](https://www.raspberrypi.org/learning/getting-started-with-microbits) resource.
 
-Also, make sure you have the Python 3 Scratch library and mu installed, as detailed in the [software setup guide](software.md).
-
 ## Finding the USB port
 
 For the micro:bit to be able to communicate with Scratch, you need to know how the micro:bit is connected to the Raspberry Pi.
