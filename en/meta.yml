@@ -1,0 +1,30 @@
+---
+title: micro:bit game controller with Scratch
+hero_image: images/banner.png
+description: In this resource you will use a micro:bit to control a sprite in the
+  programming environment Scratch
+original_url: https://raspberrypi.org/learning/microbit-game-controller
+theme: red
+duration: 2
+listed: false
+ingredient: false
+copyedit: true
+curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: rpi, physical computing, python
+site_areas: ''
+steps:
+- title: Introduction
+- title: What you will need
+- title: BBC micro:bit game controller
+- title: Setting up the micro:bit
+- title: Finding the USB port
+- title: Setting up the Python file
+- title: Coding the micro:bit
+- title: Setting up Scratch
+- title: Making the assets
+- title: Coding the rocket
+- title: Coding the UFO
+- title: Coding the missile
+- title: What next?
+
