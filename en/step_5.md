@@ -1,18 +1,29 @@
-## Finding the USB port
+## Coding the micro:bit
 
-For the micro:bit to be able to communicate with Scratch, you need to know how the micro:bit is connected to the Raspberry Pi.
+The micro:bit needs to run some code that will constantly print out its accelerometer readings and button pushes.
 
-- With the micro:bit **disconnected** from the Raspberry Pi, open up LXTerminal and type the following:
+- Open mu by opening LXTerminal and typing the following command:
 
-    ```bash
-	ls /dev/ttyA*
-    ```
+	```bash
+	./mu
+	```
 
-- Plug your micro:bit in via the USB cable and type the command again:
+- Now copy and paste the code below into the editor:
 
-    ```bash
-	ls /dev/ttyA*
-    ```
+	```python
+	from microbit import *
 
-- There should be a new entry in the output, probably something like `dev/ttyACM1`. You need to note this down.
+	def get_sensor_data():
+		x, y, z = accelerometer.get_x(), accelerometer.get_y(), accelerometer.get_z()
+		a, b = button_a.was_pressed(), button_b.was_pressed()
+		print(x, y, z, a, b)
+
+
+	while True:
+		sleep(100)
+		get_sensor_data()
+
+	```
+
+- You can flash this file into your micro:bit straight away.
 

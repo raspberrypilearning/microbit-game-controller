@@ -2,21 +2,27 @@
 
 ### Hardware
 
+* Raspberry Pi
 * BBC micro:bit
 * USB-A to micro USB-B cable
 
 ### Software
 
-#### Software installation
+You will need the [latest version of Raspbian](https://www.raspberrypi.org/downloads/) which already includes the following software packages:
 
-To install the software open LXTerminal and type:
+- Scratch 2
+- Python 3
+
+You will need to install the following packages:
+
+- Mu
+- Scratch API for Python
+
+[[[rpi-install-software]]]
+
+Type these commands into the terminal to install the necessary packages:
 
 ```bash
 sudo apt-get update && sudo apt-get install mu -y
-```
-
-You'll also need the Python Scratch library. You can install this by typing the following into LXTerminal:
-
-```bash
-sudo pip3 install --pre scratch
+sudo pip3 install scratchapi
 ```
