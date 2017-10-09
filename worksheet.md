@@ -1,5 +1,7 @@
 # BBC micro:bit game controller
 
+This is an archived resource. The repo will remain available but the resource will no longer be maintained or updated. Some or all parts of the resource may no longer work. To see our latest resources, please visit [raspberrypi.org](http://www.raspberrypi.org). 
+
 In this resource, you'll use a micro:bit as a game controller in Scratch, and help regain control of the galaxy!
 
 ## Setting up the micro:bit
@@ -37,7 +39,7 @@ For the micro:bit to be able to communicate with Scratch, you need to know how t
     scr = scratch.Scratch()
     ## THE NEXT LINE MIGHT NEED TO BE CHANGED - TYPE ls /dev/ttyA* into the terminal to see which port is needed.
 	PORT = "/dev/ttyACM1"
-	## 
+	##
 	BAUD = 115200
 
 	s = serial.Serial(PORT)
@@ -68,7 +70,7 @@ For the micro:bit to be able to communicate with Scratch, you need to know how t
 	```python
 	PORT = "/dev/ttyACM1"
 	```
-	
+
 It needs to be the same as the port you noted down earlier.
 
 ## Coding the micro:bit
@@ -208,4 +210,3 @@ The game has plenty of potential to be improved.
 - Can you add in some obstacles for the rocket and UFO to avoid?
 - You still have to find a use for the `b` button. Maybe this could start a turbo mode where the rocket flies faster?
 - Could the UFO shoot a laser beam at the rocket every now and then?
-

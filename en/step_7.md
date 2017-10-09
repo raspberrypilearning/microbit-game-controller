@@ -1,29 +1,26 @@
-## Coding the micro:bit
+## Making the assets
 
-The micro:bit needs to run some code that will constantly print out its accelerometer readings and button pushes.
+You're going to need three new sprites for this game. Delete the cat sprite and then find a rocket sprite, a UFO sprite and a missile sprite. You can use the ones below if you like, search on the web, or even draw your own.
 
-- Open mu by opening LXTerminal and typing the following command:
+![](images/rocket.png)
+![](images/ufo.png)
+![](images/missile.png)
 
-	```bash
-	./mu
-	```
+- Import each of your sprites into Scratch:
 
-- Now copy and paste the code below into the editor:
+	![screen5](images/screen5.png)
 
-	```python
-	from microbit import *
+- Rename the sprites by changing the name in the **scripts** pane:
 
-	def get_sensor_data():
-		x, y, z = accelerometer.get_x(), accelerometer.get_y(), accelerometer.get_z()
-		a, b = button_a.was_pressed(), button_b.was_pressed()
-		print(x, y, z, a, b)
+	![screen6](images/screen6.png)
 
+- The sprites will also need to be resized. You can use the `shrink sprite` tool to do this:
 
-	while True:
-		sleep(100)
-		get_sensor_data()
+	![screen7](images/screen7.png)
 
-	```
+- Lastly, you should rotate the rocket and missile sprite, so they both point toward the right-hand side of the screen. You can do this by editing the sprite in the **costume** tab and choosing the `rotate` tool:
 
-- You can flash this file into your micro:bit straight away.
+![screen9](images/screen9.png)
+
+![screen8](images/screen8.png)
 

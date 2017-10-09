@@ -1,26 +1,18 @@
-## Making the assets
+## Coding the UFO
 
-You're going to need three new sprites for this game. Delete the cat sprite and then find a rocket sprite, a UFO sprite and a missile sprite. You can use the ones below if you like, search on the web, or even draw your own.
+- The UFO needs to start in a random location and then chase after the rocket. This is fairly easy to set up. The Scratch `stage` stretches from about -250 to 250 horizontally (the x-axis) and -180 to 180 vertically (the y-axis), so picking two random numbers in these ranges will enable you to position the rocket:
 
-![](images/rocket.png)
-![](images/ufo.png)
-![](images/missile.png)
+	![screen14](images/screen14.png)
 
-- Import each of your sprites into Scratch:
+- Next, you can use a `forever` loop to get the UFO to chase the rocket:
 
-	![screen5](images/screen5.png)
+	![screen15](images/screen15.png)
 
-- Rename the sprites by changing the name in the **scripts** pane:
+- In a minute, you'll code the missile to launch at the UFO. If the missile hits the UFO, the game should restart and the player's score should go up by one. A new script is needed for this:
 
-	![screen6](images/screen6.png)
+	![screen16](images/screen16.png)
 
-- The sprites will also need to be resized. You can use the `shrink sprite` tool to do this:
+- To finish off the UFO, the game needs to end if it catches the rocket:
 
-	![screen7](images/screen7.png)
-
-- Lastly, you should rotate the rocket and missile sprite, so they both point toward the right-hand side of the screen. You can do this by editing the sprite in the **costume** tab and choosing the `rotate` tool:
-
-![screen9](images/screen9.png)
-
-![screen8](images/screen8.png)
+	![screen17](images/screen17.png)
 
